@@ -2,111 +2,22 @@
 <!-- PHP -->
 <?php
 
-   $characters = [
-      'a',
-      'b',
-      'c',
-      'd',
-      'e',
-      'f',
-      'g',
-      'h',
-      'i',
-      'l',
-      'm',
-      'n',
-      'o',
-      'p',
-      'q',
-      'r',
-      's',
-      't',
-      'u',
-      'v',
-      'z',
-      'A',
-      'B',
-      'C',
-      'D',
-      'E',
-      'F',
-      'G',
-      'H',
-      'I',
-      'L',
-      'M',
-      'N',
-      'O',
-      'P',
-      'Q',
-      'R',
-      'S',
-      'T',
-      'U',
-      'V',
-      'Z',
-      '1',
-      '2',
-      '3',
-      '4',
-      '5',
-      '6',
-      '7',
-      '8',
-      '9',
-      '0',
-      '!',
-      '?',
-      '<',
-      '>',
-      '&',
-      '|',
-      '+',
-      '-',
-      '#',
-      '§',
-      '-',
-      '_',
-      '^',
-      '*'
-   ];
-
-
+   // import file php
+   require __DIR__ . '/data/array.php';
+   require __DIR__ . '/data/functions.php';
 
    $length_pwd = $_GET['length'];
-
-   
-
-   
-   function pwd_generator($length_pwd, $characters, $pwd){
-      for($i = 0; $i < $length_pwd; $i ++){
-         $pwd .= $characters[rand(0, count($characters))];
-      }
-      return $pwd;
-   };
-
 
    // function
    $pwd = pwd_generator($length_pwd, $characters, $pwd);
 
- 
 ?>
 
 
 
 <!-- HTML -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php require __DIR__ . '/partials/head.php' ?>
 
-   <!-- BOOTSTRAP -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-   integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-   <title>Password Generator</title>
-</head>
 <body>
 
    <div class="container mt-5">
