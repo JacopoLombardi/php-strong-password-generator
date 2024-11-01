@@ -12,7 +12,7 @@
       $length_pwd = $_SESSION['length'];
 
       // function
-      $pwd = pwd_generator($length_pwd, $characters, $pwd);
+      $pwd = pwd_generator($length_pwd, $characters);
    };
 
 ?>

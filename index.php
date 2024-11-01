@@ -6,7 +6,7 @@
 
       if($_GET['length'] < 6){
          $error_msg = '';
-         $error_msg = 'Inserire una Password più lunga!!';
+         $error_msg = 'Inserire un numero più lungo!!';
 
       }else{
          session_start();
@@ -38,7 +38,6 @@
       </div>
 
       <!-- error -->
-      <h3><?php echo $pwd ?></h3>
       <h3 class="text-danger"> <?php echo $error_msg ?></h3>
 
    </div>
